@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "mocha assessments-archive/test/week-4-assessment.js",
+    "test": "node test/index.js",
     "start": "node server.js"
   },
   "author": "",
