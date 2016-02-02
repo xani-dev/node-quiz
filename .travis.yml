@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - '4.2'
+before_install:
+  - travis_retry nvm install 4.2
+env:
+  global:
+    secure: NavP0xLgkzUWaqeSHjjglxErZscrH+oh+oFRJ4enIbBZpK70/sTEbPjxE2gtH+JIi3xc5FwPjjMtyV2rnILp3Qo1yfP2ZP1OI+pCXq8MuCCzXUrrjWGMKhf1S7Sg1ADUQrcGM67XZEW+RHgDdSk06asP8s5iLnH1KH2zKqyakGM=
+script:
+  - npm test
