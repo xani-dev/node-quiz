@@ -32,7 +32,7 @@ if (!secure) {
       
       if (body && body.merged) {
         console.log('Pull request merged. Exiting.');
-        process.exit(1);  
+        process.exit(0);  
       } else {
         console.log('Could not merge for some reason: ', body);
         process.exit(0);
