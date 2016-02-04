@@ -2,6 +2,7 @@
 * Test files are hidden for assessments! Follow the instructions in the readme carefully and try to
 * anticipate what the tests may be looking for.
 */
+
 const GithubApi = require('./util/GithubApi');
 
 const org = 'CodesmithLLC';
@@ -20,12 +21,9 @@ if (!secure) {
   
   github.pullInfo({ repo: repo, pull: pull }, (err, res, body) => {
     
-    console.log('Commit sha: ', commit);
-    console.log('Head sha: ', body.head.sha);
-    
     if (body.user.login !== body.base.ref) {
       console.log('Must pull to correct branch name. Exiting.');
-      process.exit(0);
+      process.exit(1);
     }
     
     github.mergePullRequest({ repo: repo, sha: body.head.sha, pull: pull }, (err, res, body) => {
@@ -35,7 +33,7 @@ if (!secure) {
         process.exit(0);  
       } else {
         console.log('Could not merge for some reason: ', body);
-        process.exit(0);
+        process.exit(1);
       }
       
     });
@@ -87,13 +85,14 @@ if (!secure) {
       
       mocha.reporter(EmailReporter, { json: `${__dirname}/output.json` }).run((failures) => {
           unhook();
-          return next(null, emailString);        
+          return next(null, emailString);
         });
     }
   ], (err, result) => {
     if (err) throw err;
     
     console.log(result);
+    process.exit(0);
   });
   
 }
