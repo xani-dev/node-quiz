@@ -5,10 +5,7 @@ before_install:
   - travis_retry nvm install 4.2
 env:
   global:
-    secure: NavP0xLgkzUWaqeSHjjglxErZscrH+oh+oFRJ4enIbBZpK70/sTEbPjxE2gtH+JIi3xc5FwPjjMtyV2rnILp3Qo1yfP2ZP1OI+pCXq8MuCCzXUrrjWGMKhf1S7Sg1ADUQrcGM67XZEW+RHgDdSk06asP8s5iLnH1KH2zKqyakGM=
+    - secure: NavP0xLgkzUWaqeSHjjglxErZscrH+oh+oFRJ4enIbBZpK70/sTEbPjxE2gtH+JIi3xc5FwPjjMtyV2rnILp3Qo1yfP2ZP1OI+pCXq8MuCCzXUrrjWGMKhf1S7Sg1ADUQrcGM67XZEW+RHgDdSk06asP8s5iLnH1KH2zKqyakGM=
+    - MERGE_TOKEN=3899d0c15139b518530dc74b6077fec36ec70649
 script:
-  - git clone https://github.com/CodesmithLLC/assessments-archive.git
-  - pwd
-  - ls ../
-  - ls ./
-  - npm test
+  - npm run remote-test
