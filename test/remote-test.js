@@ -41,9 +41,7 @@ if (!secure) {
     });
     
   });
-  
-  process.exit(0);
-  
+    
 } else {
   
   console.log('Secure environment (merge) so go ahead with the testing.');
