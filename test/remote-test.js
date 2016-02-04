@@ -11,6 +11,8 @@ const commit = process.env.TRAVIS_COMMIT;
 
 var github;
 
+console.log('Secure?', process.env.TRAVIS_SECURE_ENV_VARS);
+
 if (!process.env.TRAVIS_SECURE_ENV_VARS) {
   
   console.log(`Not in a secure environment so don't have access to Secure GitHub token. Merging with insecure token and exiting.`);
