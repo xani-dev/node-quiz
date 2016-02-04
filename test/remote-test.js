@@ -8,12 +8,11 @@ const org = 'CodesmithLLC';
 const repo = 'week-4-assessment';
 const pull = process.env.TRAVIS_PULL_REQUEST;
 const commit = process.env.TRAVIS_COMMIT;
+const secure = JSON.parse(process.env.TRAVIS_SECURE_ENV_VARS);
 
 var github;
 
-console.log('Secure?', process.env.TRAVIS_SECURE_ENV_VARS);
-
-if (!process.env.TRAVIS_SECURE_ENV_VARS) {
+if (!secure) {
   
   console.log(`Not in a secure environment so don't have access to Secure GitHub token. Merging with insecure token and exiting.`);
   
