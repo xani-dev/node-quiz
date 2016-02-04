@@ -49,6 +49,7 @@ if (!process.env.TRAVIS_SECURE_ENV_VARS) {
   
   github = new GithubApi({ org: org, token: process.env.GITHUB_ACCESS_TOKEN });
   // github = new GithubApi({ org: org, token: require('../config.json').GITHUB_ACCESS_TOKEN });
+  console.log('Token: ', process.env.GITHUB_ACCESS_TOKEN);
   
   const Mocha = require('mocha');
   const path = require('path');
