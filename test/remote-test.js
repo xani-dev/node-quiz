@@ -28,7 +28,7 @@ if (!secure) {
       process.exit(0);
     }
     
-    githubApi.mergePullRequest({ repo: repo, head_sha: body.head.sha, pull: pull }, (err, res, body) => {
+    githubApi.mergePullRequest({ repo: repo, sha: body.head.sha, pull: pull }, (err, res, body) => {
       
       if (body && body.merged) {
         console.log('Pull request merged. Exiting.');
