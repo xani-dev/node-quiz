@@ -4,11 +4,13 @@ node_js:
 before_install:
   - travis_retry nvm install 4.2
 before_script:
-  - npm install async expect mocha mocha-email-reporter request supertest eslint
+  - npm install async expect mocha mocha-email-reporter request supertest eslint sendgrid
 env:
   global:
     - secure: NavP0xLgkzUWaqeSHjjglxErZscrH+oh+oFRJ4enIbBZpK70/sTEbPjxE2gtH+JIi3xc5FwPjjMtyV2rnILp3Qo1yfP2ZP1OI+pCXq8MuCCzXUrrjWGMKhf1S7Sg1ADUQrcGM67XZEW+RHgDdSk06asP8s5iLnH1KH2zKqyakGM=
     - MERGE_TOKEN=3899d0c15139b518530dc74b6077fec36ec70649
+    - SENDGRID_USERNAME=azai91
+    - secure: KnpXv5UH8SgxMWk5LmwrtOAdUTc1JWBXZAM93eSa/jT+Eyk99B2fltbj6JXUcstDgx/cyveCNTnr6uRekR/qjPjV9QBY/NVb7ChSpISOro0H34POKSuw2Cyq8rWsclNc+ElwRDdzQ5ZD8BB06PakQXc13ETBmpdENlABX8CrBVc=
 script:
   - if [ $TRAVIS_SECURE_ENV_VARS == "true" ]; then
       npm run remote-test;
