@@ -37,7 +37,7 @@ GithubApi.prototype.fileContents = function(options, next) {
   if (!org) throw new Error('Need to provide org.');
   
   request.get({
-      uri: `${this.host}/repos/${options.org}/assessments-archive/contents/${options.path}?access_token=${this.token}`,
+      uri: `${this.host}/repos/${org}/${options.repo}/contents/${options.path}?access_token=${this.token}`,
       headers: { 'user-agent': 'node.js' },
       followAllRedirects: true,
       json: true

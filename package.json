@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "remote-test": "node test/remote-test.js",
-    "start": "node server.js"
+    "merge": "node test/merge.js",
+    "start": "node server.js",
+    "lint": "eslint server.js"
   },
   "author": "",
   "license": "ISC",

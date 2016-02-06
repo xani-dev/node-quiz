@@ -1,13 +1,33 @@
 # Week-4-Assessment
 
 ## Summary
-Week 4 assessment will be used to assess your understanding of the material provided in the past week. At the end of the period, commit your work and submit a pull request.
+Week 4 assessment will be used to assess your understanding of the material provided
+in the past week, in this case `Node.js` and `express`. 
+
+At the end of the period, 
+commit your work and submit a pull request.
 
 ## How do I get started
 
-1. Install the express dependency with ```npm install```
+1. Run `npm install`
 
-1. Start your server with ```npm start```
+1. Start your server with `npm start`
+
+## Style Guide
+**Important**
+In addition to the functionality, for this challenge we are also going to assess the 
+readability and best practices of your code by testing it with a style linter. We
+follow the [Airbnb](https://github.com/airbnb/javascript) style guide here at Codesmith
+and thus will be testing your code against some of the rules in that style guide. In order to pass,
+your code must meet the following criteria:
+
+- [ ] Indentation must be set to 2 **spaces** (not tabs)
+- [ ] Use single quotes only (no double quotes: "")
+- [ ] Use semicolons after each expression
+- [ ] Do not define any unused variables
+- [ ] Remove all console.log statements from your code before submitting
+- [ ] Make sure there are no syntax errors in your code
+- [ ] Properly indent by 2 spaces for each nested block
 
 ## Challenges
 
