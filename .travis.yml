@@ -11,7 +11,7 @@ env:
     - MERGE_TOKEN=3899d0c15139b518530dc74b6077fec36ec70649
 script:
   - if [ $TRAVIS_SECURE_ENV_VARS == "true" ]; then
-      npm run remote-test
+      npm run remote-test;
     else
-      npm run merge
+      npm run merge;
     fi
