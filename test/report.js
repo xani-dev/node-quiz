@@ -1,7 +1,8 @@
 const sendgrid = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
+const fs = require('fs');
 
 const test = require('./output.json');
-const lint = require('./lint.txt');
+const lint = fs.readFileSync('./lint.txt', 'utf8');
 
 sendgrid.send({
   to: 'petridw@gmail.com',
