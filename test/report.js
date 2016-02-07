@@ -8,5 +8,5 @@ sendgrid.send({
   to: 'petridw@gmail.com',
   from: 'hello@codesmith.io',
   subject: 'Hack Hour Result',
-  html: '<html><body><p>' + test + '</p><p>' + lint + '</p></body></html>'
+  html: '<html><body><p>' + JSON.stringify(test, null, 2) + '</p><p>' + lint + '</p></body></html>'
 });
