@@ -4,10 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "remote-test": "node test/remote-test.js && npm run lint > test/lint.txt && node test/report.js",
+    "remote-test": "node test/remote-test.js && npm run lint && node test/report.js",
     "merge": "node test/merge.js",
     "start": "node server.js",
-    "lint": "eslint server.js"
+    "lint": "eslint server.js > test/lint.txt; exit 0"
   },
   "author": "",
   "license": "ISC",
