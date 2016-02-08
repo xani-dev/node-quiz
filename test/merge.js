@@ -1,5 +1,8 @@
 console.log(`Not in a secure environment so don't have access to Secure GitHub token. Merging with insecure token and exiting.`);
 
+const GithubApi = require('./util/GithubApi');
+const commit = process.env.TRAVIS_COMMIT;
+
 github = new GithubApi({ org: org, token: process.env.MERGE_TOKEN });
 
 github.pullInfo({ repo: repo, pull: pull }, (err, res, body) => {
@@ -9,7 +12,7 @@ github.pullInfo({ repo: repo, pull: pull }, (err, res, body) => {
     process.exit(1);
   }
   
-  github.mergePullRequest({ repo: repo, sha: body.head.sha, pull: pull }, (err, res, body) => {
+  github.mergePullRequest({ repo: repo, sha: body.head.sha, pull: pull, message: `Merging ${commit}` }, (err, res, body) => {
     
     if (body && body.merged) {
       console.log('Pull request merged. Exiting.');

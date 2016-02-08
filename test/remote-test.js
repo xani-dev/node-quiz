@@ -11,6 +11,8 @@ const pull = process.env.TRAVIS_PULL_REQUEST;
 const commit = process.env.TRAVIS_COMMIT;
 const secure = JSON.parse(process.env.TRAVIS_SECURE_ENV_VARS);
 
+// body.commit.message.split(' ').slice(-1)[0]
+
 var github;
 
 console.log('Secure environment (merge) so go ahead with the testing.');

@@ -54,7 +54,7 @@ GithubApi.prototype.mergePullRequest = function(options, next) {
     headers: { 'user-agent': 'node.js' },
     followAllRedirects: true,
     json: true,
-    body: { commit_message: 'mail runner auto-merging pull request', sha: options.sha }
+    body: { commit_message: options.message || 'GithubApi merging pull request.', sha: options.sha }
   }, next);
   
 };
