@@ -14,15 +14,15 @@ commit your work and submit a pull request.
 1. Start your server with `npm start`
 
 ## Style Guide
-**Important**
-In addition to the functionality, for this challenge we are also going to assess the 
+In addition to the functionality, for further assessments we are also going to start assessing the 
 readability and best practices of your code by testing it with a style linter. We
 follow the [Airbnb](https://github.com/airbnb/javascript) style guide here at Codesmith
-and thus will be testing your code against some of the rules in that style guide. In order to pass,
-your code must meet the following criteria:
+and thus will be testing your code against some of the rules in that style guide. This
+won't be strictly enforced this time, but moving forward try following as many of the
+guidelines listed here as you can:
 
-- [ ] Indentation must be set to 2 **spaces** (not tabs)
-- [ ] Use single quotes only (no double quotes: "")
+- [ ] Indentation set to 2 **spaces** (not tabs)
+- [ ] Prefer to use single quotes for strings
 - [ ] Use semicolons after each expression
 - [ ] Do not define any unused variables
 - [ ] Remove all console.log statements from your code before submitting
