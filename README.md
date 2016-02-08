@@ -13,6 +13,10 @@ commit your work and submit a pull request.
 
 1. Start your server with `npm start`
 
+## How do I submit my work
+
+1. When you are finished with your work, submit a **Pull Request** to your branch, the same exact way you submit hack hours.
+
 ## Style Guide
 In addition to the functionality, for further assessments we are also going to start assessing the 
 readability and best practices of your code by testing it with a style linter. We
