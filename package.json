@@ -7,7 +7,8 @@
     "remote-test": "node test/remote-test.js && npm run lint && node test/report.js",
     "merge": "node test/merge.js",
     "start": "node server.js",
-    "lint": "eslint server.js > test/lint.txt; exit 0"
+    "lint": "node test/lint.js server.js",
+    "test": "mocha --timeout 5000 -R mocha-email-reporter -O json=test/output.json test/precourse-assessment.js"
   },
   "author": "",
   "license": "ISC",

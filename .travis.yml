@@ -1,22 +1,25 @@
 language: node_js
 node_js:
-  - '4.2'
+  - '5.5.0'
 notifications:
   email: false
 before_install:
   - travis_retry nvm install 4.2
-before_script:
-  - npm install async expect mocha mocha-email-reporter request supertest eslint sendgrid
+  - if [ $TRAVIS_SECURE_ENV_VARS == "true" ]; then
+      npm install request;
+      npm run update-package;
+    fi
 env:
   global:
-    - secure: NavP0xLgkzUWaqeSHjjglxErZscrH+oh+oFRJ4enIbBZpK70/sTEbPjxE2gtH+JIi3xc5FwPjjMtyV2rnILp3Qo1yfP2ZP1OI+pCXq8MuCCzXUrrjWGMKhf1S7Sg1ADUQrcGM67XZEW+RHgDdSk06asP8s5iLnH1KH2zKqyakGM=
-    - MERGE_TOKEN=3899d0c15139b518530dc74b6077fec36ec70649
+    - secure: "b9c97PTHJAxNjug7uimTSuwi6XQNs8fV3Qy/K7xmi+Nj1bzePC3vjBa9eK4cKcqn6AXKbnMul30rya9otKhiqo35PzriLgVC2yHCdDiufM4kAEzWX2iinSp9pGiXPD7qGubSzZKFgk0proAA/tWTpm+ckmmgpDdQcT5QxT3coUo="
+    - MERGE_TOKEN=e7de2e3472f394690b09c98998a1804d79ed172e
     - SENDGRID_USERNAME=azai91
     - secure: KnpXv5UH8SgxMWk5LmwrtOAdUTc1JWBXZAM93eSa/jT+Eyk99B2fltbj6JXUcstDgx/cyveCNTnr6uRekR/qjPjV9QBY/NVb7ChSpISOro0H34POKSuw2Cyq8rWsclNc+ElwRDdzQ5ZD8BB06PakQXc13ETBmpdENlABX8CrBVc=
+    - secure: "hXCY0VVWcZS6kNjHGUboYQYsXc7e7mBwKaYiMCsRIM436Ap0fsBfJHere7wH34nyuMlx4/HfY6ZQEbFy4sWqGCDr32DlBTR0COYPgLgeopfTo+xNm8ivJ2pbHKmkMX+Z/GKuLDaM4zOKQYn3dNPeLlyL5faEz2RHJjlkM+1I5zg="
+    - secure: "hN2evUWb2QJkCV1pluA2fi8wTphuA3Untmp0fcDPw7wYi9MhILp95aIhA7wcM+NlLR/Pp2Wx9ByocmM+DJavzmRTtW8J1xzbTWhKKKVaWeBnf24yeGdCT1+MCyWEZontZlp80D+AOPlvvXNBe0f8B5fhJumnqqB0a5vPKRk8GvA="
 script:
   - if [ $TRAVIS_SECURE_ENV_VARS == "true" ]; then
-      npm run remote-test;
+      npm run get-test-utils && npm run test ; npm run lint ; npm run report;
     else
       npm run merge;
     fi
-    
