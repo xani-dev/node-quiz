@@ -1,10 +1,10 @@
 # Week-3-Assessment
 
 ## Summary
-Week 4 assessment will be used to assess your understanding of the material provided
-in the past week, in this case `Node.js` and `express`. 
+Week 3 assessment will be used to assess your understanding of the material provided
+in the past week, in this case `Node.js` and `express`.
 
-At the end of the period, 
+At the end of the period,
 commit your work and submit a pull request.
 
 ## How do I get started
@@ -18,7 +18,7 @@ commit your work and submit a pull request.
 1. When you are finished with your work, submit a **Pull Request** to your branch, the same exact way you submit hack hours.
 
 ## Style Guide
-In addition to the functionality, for further assessments we are also going to start assessing the 
+In addition to the functionality, for further assessments we are also going to start assessing the
 readability and best practices of your code by testing it with a style linter. We
 follow the [Airbnb](https://github.com/airbnb/javascript) style guide here at Codesmith
 and thus will be testing your code against some of the rules in that style guide. This
