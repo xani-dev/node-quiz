@@ -1,6 +1,6 @@
-var express = require('express');
-var app = express();
-var fs = require('fs');
+const express = require('express');
+const app = express();
+const fs = require('fs');
 
 // write your code here
 // serve the this.html page when /this is visited
