@@ -9,7 +9,7 @@
     "update-package": "node test/update-package.js",
     "start": "node server.js",
     "lint": "node test/lint.js server.js",
-    "test": "mocha --timeout 5000 -R mocha-email-reporter -O json=test/output.json test/week-3-assessment.js"
+    "test": "node test/remote-test.js"
   },
   "author": "",
   "license": "ISC",
