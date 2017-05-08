@@ -10,12 +10,12 @@ before_install:
     fi
 env:
   global:
-    - secure: "b9c97PTHJAxNjug7uimTSuwi6XQNs8fV3Qy/K7xmi+Nj1bzePC3vjBa9eK4cKcqn6AXKbnMul30rya9otKhiqo35PzriLgVC2yHCdDiufM4kAEzWX2iinSp9pGiXPD7qGubSzZKFgk0proAA/tWTpm+ckmmgpDdQcT5QxT3coUo="
+    - secure: FoWGCv+QWX8oOlDZZaDZie19l4X65fCg2inea915SlFf7SvfEiQWmT4Thgg0cJ/1gbcr2XbtV3mQDITRhP9YSjcfOTAstDCaUCGs0YFMiLdQnRa7CPBOOxpKg/Ew85mH4wQegBJe2BLPJtlzUdk5lnN/n3O0g0T/cuBQPDSjCGQ=
     - MERGE_TOKEN=7ec583e95b00bfab262215cb3bb41c5ec822951f
     - SENDGRID_USERNAME=azai91
     - secure: KnpXv5UH8SgxMWk5LmwrtOAdUTc1JWBXZAM93eSa/jT+Eyk99B2fltbj6JXUcstDgx/cyveCNTnr6uRekR/qjPjV9QBY/NVb7ChSpISOro0H34POKSuw2Cyq8rWsclNc+ElwRDdzQ5ZD8BB06PakQXc13ETBmpdENlABX8CrBVc=
-    - secure: "hXCY0VVWcZS6kNjHGUboYQYsXc7e7mBwKaYiMCsRIM436Ap0fsBfJHere7wH34nyuMlx4/HfY6ZQEbFy4sWqGCDr32DlBTR0COYPgLgeopfTo+xNm8ivJ2pbHKmkMX+Z/GKuLDaM4zOKQYn3dNPeLlyL5faEz2RHJjlkM+1I5zg="
-    - secure: "hN2evUWb2QJkCV1pluA2fi8wTphuA3Untmp0fcDPw7wYi9MhILp95aIhA7wcM+NlLR/Pp2Wx9ByocmM+DJavzmRTtW8J1xzbTWhKKKVaWeBnf24yeGdCT1+MCyWEZontZlp80D+AOPlvvXNBe0f8B5fhJumnqqB0a5vPKRk8GvA="
+    - secure: hXCY0VVWcZS6kNjHGUboYQYsXc7e7mBwKaYiMCsRIM436Ap0fsBfJHere7wH34nyuMlx4/HfY6ZQEbFy4sWqGCDr32DlBTR0COYPgLgeopfTo+xNm8ivJ2pbHKmkMX+Z/GKuLDaM4zOKQYn3dNPeLlyL5faEz2RHJjlkM+1I5zg=
+    - secure: hN2evUWb2QJkCV1pluA2fi8wTphuA3Untmp0fcDPw7wYi9MhILp95aIhA7wcM+NlLR/Pp2Wx9ByocmM+DJavzmRTtW8J1xzbTWhKKKVaWeBnf24yeGdCT1+MCyWEZontZlp80D+AOPlvvXNBe0f8B5fhJumnqqB0a5vPKRk8GvA=
 script:
   - if [ $TRAVIS_SECURE_ENV_VARS == "true" ]; then
       npm run get-test-utils && npm run test ; npm run lint ; npm run report;
