@@ -1,11 +1,10 @@
-# Week-3-Assessment
+# Node-Assessment
 
 ## Summary
-Week 3 assessment will be used to assess your understanding of the material provided
-in the past week, in this case `Node.js` and `express`.
+The node assessment will be used to assess your understanding of the material provided
+in the previous few units, in this case `Node.js` and `express`.
 
-At the end of the period,
-commit your work and submit a pull request.
+At the end of the period, commit your work and submit a pull request.
 
 ## How do I get started
 
