@@ -16,5 +16,8 @@
   "dependencies": {
     "express": "^4.13.1",
     "request": "^2.69.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.17.0"
   }
 }
