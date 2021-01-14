@@ -1,20 +1,7 @@
 language: node_js
 node_js:
-  - '6.4.0'
-notifications:
-  email: false
+  - '15.2.1'
 before_install:
-  - if [ $TRAVIS_SECURE_ENV_VARS == "true" ]; then
-      npm install request;
-      npm run update-package;
-    fi
-env:
-  global:
-    - secure: THV2fJ7mkTjmOq1E0W4bsh06nVxmjIsP3WwkRicuhxw+zjFbnfx/Kf9s05VsGsl4fiCz7pFlB0ORy3b3NJvDaYtFcGFN319RMKmsctcd3gxdhUhvLPgVBahWcFFDSsKnPBS6sCCqcYQ9YjVcNu6gprdN4EPvUbeD/o6nfy75Pr8=
-    - secure: fUS704w3XoM7pKMyZtpLJW+/KG1mvmUPsZDMCyMPCJyUFtaGvVmk5MM1/uTysbZ3VbnvonMN6rISxASlyum0gCOnw1PzomV+3XFNj7Bq2A6SEFuJ3Wxt/AU5AMOpEIouBdwSI/eAbCqZ7ZQpMKFrUUqHrOIPqNuhf1Mpt5I56HU=
+  - npm install request;
 script:
-  - if [ $TRAVIS_SECURE_ENV_VARS == "true" ]; then
-      npm run get-test-utils && npm run test ; npm run lint ; npm run report;
-    else
-      npm run merge;
-    fi
+  - npm run merge;
