@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const fs = require('fs');
+const PORT = 3000;
 
 // write your code here
 // serve the this.html page when /this is visited
@@ -9,4 +9,6 @@ const fs = require('fs');
 
 
 
-app.listen(3000);
+app.listen(PORT, () => {
+  console.log(`Server listening on port: ${PORT}...`);
+});
