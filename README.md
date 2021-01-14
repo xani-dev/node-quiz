@@ -18,7 +18,9 @@ At the end of the period, commit your work and submit a pull request.
 
 ## Style Guide
 In addition to the functionality, we are going to start assessing the
-readability and best practices of your code by testing it with a custom style linter. The following rules should be adhered to as closely as possible:
+readability and best practices of your code by testing it with a custom
+linter configuration. The following rules should be adhered to as closely
+as possible:
 
 - [ ] Indentation set to 2 **spaces** (not tabs)
 - [ ] Prefer single quotes to double quotes for strings
