@@ -4,18 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "merge": "node test/merge.js",
-    "get-test-utils": "node test/get-test-utils.js",
-    "update-package": "node test/update-package.js",
-    "start": "node server.js",
-    "lint": "node test/lint.js server.js",
-    "test": "node test/remote-test.js"
+    "merge": "node util/merge.js",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.1",
-    "request": "^2.69.0"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "eslint": "^7.17.0"
