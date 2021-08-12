@@ -37,7 +37,7 @@ Modify `server.js` to create the following functionality. Read the instructions 
 *IMPORTANT*
   - DO NOT MODIFY THE FILES IN THE `/client` FOLDER IN ANY WAY. You only need to modify `/server.js` to complete this assessment.
   - You may use either vanilla Node or Express for this assessment.
-  - Is using express, do not use the `express.static` middleware to serve static files.
+  - If using express, do not use the `express.static` middleware to serve static files.
 
 1. Create a *GET* route for the url `/this`
   - the route should respond to *GET* requests to `/this` by sending the file `this.html` located in the `client` folder
