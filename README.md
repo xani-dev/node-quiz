@@ -42,22 +42,20 @@ Modify the files in the `server` directory to create the following functionality
 
 1. Create a *GET* route for the url `/colors`
   - the route should respond to *GET* requests to `/colors` by sending the file `colors.html` located in the `client` folder
-  - the response must include the header `content-type: text/html; charset=UTF-8`
-  - the response status code must be `200`
+  - Your response should include the correct content type and status code of 200.
 2. You'll see a dropdown menu on the page you just served. When you select an option from this menu, the frontend will make a POST request to the `/colors` route, sending the selected option as the request body. (You can look at how this request is being sent in the `colors.html` file's script tag.) Create a route to handle this POST request.
-  - Note that the frontend sends the request body in JSON format, so you'll need to ensure that your server can handle this data.
+  - Note that the frontend sends the request body in JSON format, so you'll need to ensure that your server parses the body of the request as JSON.
 3. We want to perform some logic on the data that's being sent from the frontend before we send a response back. We'll do this using Express middleware and a controller - which you'll write in the `controller.js` file.
   - In `controller.js`, give the `controller` object a method called `getColor`. 
   - `getColor` should get the string that was sent on the request body and find its matching property on the `options` object. (There is one item on the dropdown menu that is not present in this object. Make sure to handle cases in which the data from the request can't be found!)
   - Export the `getColor` function so that you can use it in your `server.js` file.
-4. After `getColor` runs, end the request/response cycle with a function that sends the correct color back to the frontend in JSON format.
+4. After `getColor` runs, end the request/response cycle with a function that sends the correct color back to the frontend in a JSON object.
   - This function **must** be defined in the `server.js` file.
   - Hint: make sure the JSON object you're sending back matches the format that the frontend is expecting!
 5. Now, add some styling! When the browser loads the HTML for `colors.html`, it's going to make another request to your server for `styles.css`. Make sure this request works.
   - Your server must send the file `styles.css` located in the `client` folder when a request to `/styles.css` arrives
-  - the response must include the header `content-type: text/css; charset=UTF-8`
-  - the response status code must be `200`
+  - Make sure your response includes the correct content type and status code.
 1. Add a 404 handler to your server such that if a request comes in to *ANY* route not listed above the 404 page is sent
   - Your server must send the file `404.html` located in the `client` folder
-  - the response must include the header `content-type: text/html; charset=UTF-8`
-  - the response status code must be `404`
+  - Make sure your response includes the correct content type
+  - This time, the response status code must be `404`
