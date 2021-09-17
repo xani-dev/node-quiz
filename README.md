@@ -48,7 +48,7 @@ Modify the files in the `server` directory to create the following functionality
   - Note that the frontend sends the request body in JSON format, so you'll need to ensure that your server can handle this data.
 3. We want to perform some logic on the data that's being sent from the frontend before we send a response back. We'll do this using Express middleware and a controller - which you'll write in the `controller.js` file.
   - In `controller.js`, give the `controller` object a method called `getColor`. 
-  - `getColor` should get the string that was sent on the request body and find its matching property on the `options` object. (Make sure to handle cases in which the data from the request can't be found in this object!)
+  - `getColor` should get the string that was sent on the request body and find its matching property on the `options` object. (There is one item on the dropdown menu that is not present in this object. Make sure to handle cases in which the data from the request can't be found!)
   - Export the `getColor` function so that you can use it in your `server.js` file.
 4. After `getColor` runs, end the request/response cycle with a function that sends the correct color back to the frontend in JSON format.
   - This function **must** be defined in the `server.js` file.
