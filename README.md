@@ -44,7 +44,6 @@ Modify the files in the `server` directory to create the following functionality
   - the route should respond to *GET* requests to `/colors` by sending the file `colors.html` located in the `client` folder
   - Your response should include the correct content type and status code of 200.
 2. You'll see a dropdown menu on the page you just served. When you select an option from this menu, the frontend will make a POST request to the `/colors` route, sending the selected option as the request body. (You can look at how this request is being sent in the `colors.html` file's script tag.) Create a route to handle this POST request.
-  - Note that the frontend sends the request body in JSON format, so you'll need to ensure that your server parses the body of the request as JSON.
 3. We want to perform some logic on the data that's being sent from the frontend before we send a response back. We'll do this using Express middleware and a controller - which you'll write in the `controller.js` file.
   - In `controller.js`, give the `controller` object a method called `getColor`. 
   - `getColor` should get the string that was sent on the request body and find its matching property on the `options` object. (There is one item on the dropdown menu that is not present in this object. Make sure to handle cases in which the data from the request can't be found!)

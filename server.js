@@ -3,7 +3,11 @@ const app = express();
 const path = require('path');
 const PORT = 3000;
 
-// write your code here
+
+// parses JSON from incoming request
+app.use(express.json());
+
+
 // serve the colors.html page when /colors is visited
 // handle post requests to /colors
 // DO NOT USE express.static
