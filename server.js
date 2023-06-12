@@ -1,15 +1,13 @@
 const express = require('express');
-const pool = require('./dbConnection')
 const path = require('path');
 const PORT = 8080;
-const colorsPath = path.join(__dirname, './client/colors.html');
 
 
 const app = express();
 // parses JSON from incoming request
 app.use(express.json());
 
-
+// Do not edit
 const options = {
   lemon:  'yellow',
   lime: 'limegreen',
@@ -17,40 +15,39 @@ const options = {
   grapefruit: 'lightcoral'
 };
 
-// helper function called 'getColor' - takes in 'fruit' string parameter and returns a 'color' parameter from the options object
+// #3 helper function 'getColor`
 const getColor = (fruit) => {
-  return options[fruit];
 }
 
-// serve the colors.html page when /colors is visited
+// #1 serve the colors.html page when /colors is visited
 // DO NOT USE express.static
-app.get('/colors', async (req, res) => {
-  res.status(200).sendFile(colorsPath);
+app.get('/colors', () => {
+  
 });
 
-// handle POST requests to /colors
-app.post('/colors', (req, res) => {
-  const { fruit } = req.body;
-  const color = getColor(fruit);
-  color ? res.status(200).send({color: color}) : res.status(404)
+// #2 & #4 handle POST requests to /colors
+app.post('/colors', () => {
+  
 });
 
-app.get('/styles.css', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, '/client/styles.css'));
+// #6 serve styles.css - DO NOT use express.static()
+app.get('/styles.css', () => {
+
 });
 
+// #5 Update functionality to database
+app.put('/colors/:id/:fruit', () => {
 
-app.put('/colors/:id/:fruit', async (req, res) => {
-  const {id, fruit} = req.params;
-  console.log(fruit);
 });
 
-app.get('/*', async (req, res) => {
-  res.sendFile(path.join(__dirname, './client/404.html'))
+// #7 unknown routes - 404 handler
+// research what route to serve this for
+app.get('', () => {
+  
 })
 
 // Global error handling middleware
-// How can we trigger this to run?
+// You can leave this alone
 app.use((err, req, res, next) => {
   const defaultErr = {
     log: 'Express error handler caught unknown middleware error',

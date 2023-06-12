@@ -4,7 +4,7 @@
 The assessment will assess your understanding of the material provided
 in the Node unit, in this case `Node.js` and `express`.
 
-At the end of the period, commit your work.
+Use any online resources except AI tools and other students. At the end of the period, commit your work.
 
 ## How do I get started
 
@@ -55,4 +55,7 @@ Modify the files in the `server.js` file to create the following functionality. 
 
 7. BONUS - Add a 404 handler to your server such that if a request comes in to *ANY* route not listed above the 404 page is sent
   - Your server must send the file `404.html` located in the `client` folder
+  - Think about where this route should be located
   - This time, the response status code must be `404`
+
+Each objective is worth 15 points.
