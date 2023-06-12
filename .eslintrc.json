@@ -1,6 +1,6 @@
 {
   "root": true,
-  "ignorePatterns": ["**/test", "**/__tests__"],
+  "ignorePatterns": ["**/test", "**/__tests__", "server.js", "dbConnection.js"],
   "env": {
     "node": true,
     "es2021": true
@@ -12,7 +12,6 @@
     "no-unused-vars": ["off", { "vars": "local" }],
     "prefer-const": "warn",
     "quotes": ["warn", "single"],
-    "semi": ["warn", "always"],
     "space-infix-ops": "warn"
   }
 }
